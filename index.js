@@ -1,5 +1,37 @@
 /* Your Code Here */
+const createEmployeeRecord = info => {
+  const record: {
+    firstName: info[0],
+    lastName: info[1],
+    title: info[2],
+    payPerHour: info[3].
+    timeInEvents: [],
+    timeOutEvents: []
+  }
+  return record;
+};
 
+const createEmployeeRecords = array => {
+  return array.map(e => createEmployeeRecord(e))
+};
+
+function createTimeInEvent(datestamp) {
+  this.timeInEvents.push({
+    type: "TimeIn",
+    date: dateStamp.split(' ')[0],
+    hour: parseInt(dateStamp.split(' ')[1])
+  })
+  return this;
+};
+
+function createTimeOutEvent(datestamp) {
+  this.timeOutEvents.push({
+    type: "TimeOut",
+    date: dateStamp.split(' ')[0],
+    hour: parseInt(dateStamp.split(' ')[1])
+  })
+  return this;
+};
 /*
  We're giving you this function. Take a look at it, you might see some usage
  that's new and different. That's because we're avoiding a well-known, but
