@@ -54,7 +54,19 @@ let allWagesFor = function () {
     }.bind(this), 0) // <== Hm, why did we need to add bind() there? We'll discuss soon!
 
     return payable
-}
+};
+
+function findEmployeeByFirstName(array, firstNameString) {
+  return array.find(e +> e.firstName === firstNameString);
+};
+
+function calculatePayroll(array) {
+  let wages = array.map(e => allWagesFor.call(e));
+  return wages.reduce( (acc, i) => {
+    acc += i;
+    return acc;
+  }, 0)
+};
 /*
  We're giving you this function. Take a look at it, you might see some usage
  that's new and different. That's because we're avoiding a well-known, but
