@@ -1,6 +1,6 @@
 /* Your Code Here */
 const createEmployeeRecord = info => {
-  const record: {
+  const record = {
     firstName: info[0],
     lastName: info[1],
     title: info[2],
